@@ -1,0 +1,11 @@
+/Users/saurabhsingh/sd/notification-system/backend/src/main/java/com/notifications/dto/NotificationRequest.java
+/Users/saurabhsingh/sd/notification-system/backend/src/main/java/com/notifications/service/NotificationService.java
+/Users/saurabhsingh/sd/notification-system/backend/src/main/java/com/notifications/exception/GlobalExceptionHandler.java
+/Users/saurabhsingh/sd/notification-system/backend/src/main/java/com/notifications/NotificationApplication.java
+/Users/saurabhsingh/sd/notification-system/backend/src/main/java/com/notifications/api/NotificationController.java
+/Users/saurabhsingh/sd/notification-system/backend/src/main/java/com/notifications/domain/UserPreference.java
+/Users/saurabhsingh/sd/notification-system/backend/src/main/java/com/notifications/config/RedisConfig.java
+/Users/saurabhsingh/sd/notification-system/backend/src/main/java/com/notifications/kafka/NotificationProducer.java
+/Users/saurabhsingh/sd/notification-system/backend/src/main/java/com/notifications/config/SecurityConfig.java
+/Users/saurabhsingh/sd/notification-system/backend/src/main/java/com/notifications/kafka/NotificationConsumer.java
+/Users/saurabhsingh/sd/notification-system/backend/src/main/java/com/notifications/repository/UserPreferenceRepository.java
