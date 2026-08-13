@@ -1,0 +1,48 @@
+{
+  "models": {
+    "lstm_digital_twin": {
+      "path": "/models/lstm_digital_twin.onnx",
+      "inputShape": [1, 10, 5],
+      "outputShape": [1, 2],
+      "scaler": {
+        "type": "MinMaxScaler",
+        "features": ["rpm", "load_percent", "load_kw", "current", "torque"],
+        "targets": ["vibration", "temperature"]
+      },
+      "description": "Predicts next state (vibration, temperature) from sequence of machine features"
+    },
+    "dqn_agent": {
+      "path": "/models/dqn_agent.onnx",
+      "inputShape": [1, 3],
+      "outputShape": [1, 3],
+      "scaler": {
+        "type": "MinMaxScaler",
+        "features": ["vibration", "temperature", "load_kw"]
+      },
+      "actions": ["decrease_load", "hold_load", "increase_load"],
+      "description": "RL agent for load optimization decisions"
+    },
+    "autoencoder_anomaly": {
+      "path": "/models/autoencoder_anomaly.onnx",
+      "inputShape": [1, 3],
+      "outputShape": [1, 3],
+      "scaler": {
+        "type": "MinMaxScaler",
+        "features": ["vibration", "current", "temperature"]
+      },
+      "anomalyThreshold": 0.0814,
+      "description": "Detects mechanical and electrical faults via reconstruction error"
+    },
+    "gru_load_forecast": {
+      "path": "/models/gru_load_forecast.onnx",
+      "inputShape": [1, 24, 1],
+      "outputShape": [1, 1],
+      "scaler": {
+        "type": "MinMaxScaler",
+        "feature": "load_kw"
+      },
+      "sequenceLength": 24,
+      "description": "Forecasts future load demand for scheduling optimization"
+    }
+  }
+}
